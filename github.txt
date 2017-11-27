@@ -1,0 +1,8 @@
+#Standard Github Script
+#!/bin/bash
+git add *
+echo Enter Commit Name
+read x
+git commit -m $x
+git push origin master
+
