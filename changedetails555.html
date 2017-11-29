@@ -43,8 +43,12 @@
 </body>
 <footer>
   <script>
-  var field1 = cookies.get();
+  var field1 = Cookies.get('field1');
+  var field2 = Cookies.get('field2');
+  var field3 = Cookies.get('field3');
   document.getElementById('firstnamedata').innerHTML = field1;
+    document.getElementById('lastnamedata').innerHTML = field2;
+    document.getElementById('emaildata').innerHTML = field3;
   </script>
 </footer>
 </html>
