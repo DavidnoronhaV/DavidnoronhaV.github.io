@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="cookieconsent.min.css">
+  <script src="cookieconsent.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://unpkg.com/blaze">
+<script src="process.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#000"
+      },
+      "button": {
+        "background": "#f1d600"
+      }
+    },
+    "theme": "edgeless",
+    "position": "bottom-right"
+  })});
+  </script>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('skyscraper.png');
+  }
+  </style>
+</head>
+<body>
+  <br>
+  <h2>Change Login Details</h2>
+  <br>
+  <h3>Current Details</h3>
+  <br>
+  <p id="firstnamedata"></p>
+  <br>
+  <p id="lastnamedata"></p>
+  <br>
+  <p id="emaildata"></p>
+  <br>
+</body>
+<footer>
+  <script>
+  var field1 = cookies.get();
+  document.getElementById('firstnamedata').innerHTML = field1;
+  </script>
+</footer>
+</html>
