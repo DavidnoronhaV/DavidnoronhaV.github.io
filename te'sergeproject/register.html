@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('skyscraper.png');
+  }
+  .hidden{
+    visibility: hidden;
+  }
+  </style>
+  <title>Register Form</title>
+  <script src="parsley.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://unpkg.com/blaze">
+  <script src="process.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="cookieconsent.min.css">
+  <script src="cookieconsent.min.js" type="text/javascript"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#000"
+      },
+      "button": {
+        "background": "#f1d600"
+      }
+    },
+    "theme": "edgeless",
+    "position": "bottom-right"
+  })});
+  </script>
+</head>
+<body>
+    <div class="o-container u-centered">
+  <h2>Registration Form</h2>
+  <br>
+  <form data-parsley-validate="" id="mainform">
+    <label for="firstname">Firstname</label>
+    <input type="text" name="field1" required="" class="form-control c-field" placeholder="Your Name"></input>
+    <br>
+    <br>
+    <label for="lastname">Lastname</label>
+    <input type="text" name="field2" required="" class="form-control c-field" placeholder="Your Surname"></input>
+    <br>
+    <br>
+    <label for="email">Enter Email</label>
+    <input type="email" name="field3" required="" class="form-control c-field" data-parsley-trigger="change" placeholder="Email Address"></input>
+    <br>
+    <br>
+    <label for="password">Password</label>
+    <input name="field4" type="password" required="" class="form-control c-field" name="password" placeholder="Any Random Password"></input>
+    <p id="password"></p>
+    <br>
+    <br>
+    <input type="submit" class="c-button c-button--brand" value="Validate">
+    <br>
+    <br>
+    <button type="button" class="c-button c-button--brand" onclick="storeValues(form);">Submit</button>
+</div>
+  <div class="c-alert c-alert--success hidden" id="info">
+  <button class="c-button c-button--close">&times;</button>
+  Success!
+</div>
+  <div class="c-alert c-alert--error hidden" id="alert">
+  <button class="c-button c-button--close">&times;</button>
+  Error! 😭 There Seems To Be An Error In Your Form.
+</div>
+  <script type="text/javascript">
+$(function () {
+  $('#mainform').parsley().on('field:validated', function() {
+    var ok = $('.parsley-error').length === 0;
+    $('#info').toggleClass('hidden', !ok);
+    $('#alert').toggleClass('hidden', ok);
+  })
+});
+function storeValues(form)
+  {
+    setCookie("field1", form.field1.value);
+    setCookie("field2", form.field2.value);
+    setCookie("field3", form.field3.value);
+    setCookie("field4", form.field4.value);
+    return true;
+  }
+  </script>
+</body>

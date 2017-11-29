@@ -1,0 +1,14 @@
+/* Normal CSS For DavidNoronhaV.github.io */
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+h1,h2,h3,h4,h5{
+  font-family: 'Lato', sans-serif;
+}
+body{
+  font-family: 'Merriweather Sans', sans-serif;
+}
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}no
