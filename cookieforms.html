@@ -23,30 +23,86 @@
   #first{
     background-color: 	rgb(27, 188, 155);
   }
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
   body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather', serif;
+
   }
-  h1{
-    font-family: 300px;
+  h2{
+    font-size: 80px;
   }
+  img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#second{
+  background-color: rgb(173,216,230);
+}
+p{
+  font-size: 20px;
+}
+#third{
+  background-image: url("https://s18.postimg.org/60g805bvd/Textures_Com_High_Rise_Glass0109_S.jpg");
+  color: white;
+}
   </style>
+  <link rel="stylesheet" href="https://unpkg.com/blaze@3.6.3/dist/blaze.min.css">
 </head>
 <body>
 <div id="pagepiling">
   <section class="o-container u-centered section" id="first">
 <div class="o-grid">
 <div class="o-grid__cell">
-<h1>
+<h1 id="huge">
   Cookie Forms ,
   Data Saved In The Browser
 </h1>
+<img src="https://s2.postimg.org/78qilf12h/image.png" class="o-image" width="300" height="300">
 </div>
 <div class="o-grid__cell">
-<img src="https://gitcdn.xyz/repo/DavidnoronhaV/davidnoronhav.github.io/master/icon__cookies-and-milk.svg" class="o-image">
+<img src="https://gitcdn.xyz/repo/DavidnoronhaV/davidnoronhav.github.io/master/icon__cookies-and-milk.svg" class="o-image center">
+</div>
+</div>
+  </section>
+  <section class="o-container u-centered section" id="second">
+    <br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yoE9-tNvhRs" frameborder="0" allowfullscreen></iframe>
+    <br>
+  </section>
+  <section class="o-container u-centered section" id="third">
+    <h2>How It Works</h2>
+    <div class="o-grid">
+      <div class="o-grid__cell">
+    <p>When A User Inputs Data Into A Cookie Form The Data Is Saved As A Javascript Cookie Along With The User's IP Address.
+    So In Other Words, The User's Input Is Only As Safe As His Computer It-Self.
+  When A User Wants To Use That Infomation On The Same Website Where He Saved It, The Website Can Easily Use It And As A Cookie Is Reserved Only For A Certain Website.</p>
+  <a href="https://cdn.rawgit.com/DavidnoronhaV/cookieform/f3cf53cf/Form%20Cookies.pdf" class="c-button c-button--brand">See Infograph</a>
+<br>
+<br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Wikimedia_Foundation_Servers-8055_14.jpg" class="o-image center" width="300" height="300">
+</div>
+<div class="o-grid__cell">
+<img src="https://s8.postimg.org/l1dywqtjp/cookie_full_size.jpg" class="o-image" width="500" height="500">
 </div>
 </div>
   </section>
 </div>
 </body>
+<footer>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" rel="stylesheet"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pagepiling.js@1.5.4/dist/jquery.pagepiling.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/pagepiling.js@1.5.4/dist/jquery.pagepiling.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/davatron5000/FitText.js@1.2.0/jquery.fittext.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/davatron5000/FitVids.js@1.2.0/jquery.fitvids.js"></script>
+  <script>
+  $(document).ready(function() {
+	$('#pagepiling').pagepiling();
+});
+jQuery("#huge").fitText();
+$(document).ready(function(){
+   $("#second").fitVids();
+ });
+  </script>
+</footer>
 </html>
