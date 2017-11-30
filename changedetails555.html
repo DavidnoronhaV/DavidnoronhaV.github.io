@@ -26,6 +26,12 @@
     font-family: 'Open Sans', sans-serif;
     background-image: url('skyscraper.png');
   }
+  .hidden{
+    visibility: hidden;
+  }
+  .visible{
+    visibility: visible;
+  }
   </style>
 </head>
 <body>
@@ -35,13 +41,41 @@
   <br>
   <h3>Current Details</h3>
   <br>
+  <h3>Firstname</h3>
   <p id="firstnamedata"></p>
   <br>
+  <h3>Lastname</h3>
   <p id="lastnamedata"></p>
   <br>
+  <h3>Email Address</h3>
   <p id="emaildata"></p>
   <br>
-    <button class="c-button c-button--brand" onclick="document.getElementById('change').css='visible'"></button>
+    <button class="c-button c-button--brand" onclick="lex();">Yes Change My Login Info</button>
+    <br>
+  <div id="change">
+    <form data-parsley-validate="" id="mainform">
+      <label for="firstname">Firstname</label>
+      <input type="text" name="field1" required="" class="form-control c-field" placeholder="Your Name"></input>
+      <br>
+      <br>
+      <label for="lastname">Lastname</label>
+      <input type="text" name="field2" required="" class="form-control c-field" placeholder="Your Surname"></input>
+      <br>
+      <br>
+      <label for="email">Enter Email</label>
+      <input type="email" name="field3" required="" class="form-control c-field" data-parsley-trigger="change" placeholder="Email Address"></input>
+      <br>
+      <br>
+      <label for="password">Password</label>
+      <input name="field4" type="password" required="" class="form-control c-field" name="password" placeholder="Any Random Password"></input>
+      <p id="password"></p>
+      <br>
+      <br>
+      <input type="submit" class="c-button c-button--brand" value="Validate">
+      <br>
+      <br>
+      <button type="button" class="c-button c-button--brand" onclick="storeValues(form);">Submit</button>
+  </div>
   </div>
 </body>
 <footer>
@@ -52,6 +86,22 @@
   document.getElementById('firstnamedata').innerHTML = field1;
     document.getElementById('lastnamedata').innerHTML = field2;
     document.getElementById('emaildata').innerHTML = field3;
+    function storeValues(form)
+      {
+        setCookie("field1", form.field1.value);
+        setCookie("field2", form.field2.value);
+        setCookie("field3", form.field3.value);
+        setCookie("field4", form.field4.value);
+        return true;
+      }
+      function lex() {
+    var x = document.getElementById("change");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
   </script>
 </footer>
 </html>

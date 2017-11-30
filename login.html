@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://unpkg.com/blaze">
+  <link rel="stylesheet" href="cookieconsent.min.css">
+  <script src="cookieconsent.min.js" type="text/javascript"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#000"
+      },
+      "button": {
+        "background": "#f1d600"
+      }
+    },
+    "theme": "edgeless",
+    "position": "bottom-right"
+  })});
+  </script>
+  <script src="process.js"></script>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('skyscraper.png');
+  }
+  .hidden{
+    visibility: hidden;
+  }
+  .visible{
+    visibility: visible;
+  }
+  </style>
+  <script>
+  var field1 = Cookies.get('field1');
+  var field2 = Cookies.get('field2');
+  var field3 = Cookies.get('field3');
+  </script>
+</head>
+<body>
+  <div class="o-container u-centered">
+    <br>
+    <h2>Login</h2>
+    <br>
+    <form>
+      <br>
+      <label for="Fistname">Input Firstname</label>
+      <input name="Firstname"
+      <br>
+    </form>
+    <br>
+  </div>
+</body>
+</html>

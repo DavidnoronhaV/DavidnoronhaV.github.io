@@ -32,6 +32,12 @@
     "position": "bottom-right"
   })});
   </script>
+  <script type="application/javascript">
+    function getIP(json) {
+      Cookies.set('ip', json.ip, { expires: 365 , path: '/' });
+    }
+  </script>
+  <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 </head>
 <body>
     <div class="o-container u-centered">
