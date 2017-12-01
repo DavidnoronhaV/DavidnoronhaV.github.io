@@ -2,10 +2,12 @@
 <html>
 <head>
   <style>
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  @font-face{
+  font-family: "Butler";
+  src: url('Butler.otf');
+  }
   body{
-    font-family: 'Open Sans', sans-serif;
-    background-image: url('skyscraper.png');
+  font-family: "Butler";
   }
   .hidden{
     visibility: hidden;
@@ -55,10 +57,8 @@
     <p id="password"></p>
     <br>
     <br>
-    <input type="submit" class="c-button c-button--brand" value="Validate">
+    <input type="submit" class="c-button c-button--brand" value="Validate" onclick="storeValues(form);windows.location.replace('login.html');">
     <br>
-    <br>
-    <button type="button" class="c-button c-button--brand" onclick="storeValues(form);">Submit</button>
 </div>
   <div class="c-alert c-alert--success hidden" id="info">
   <button class="c-button c-button--close">&times;</button>

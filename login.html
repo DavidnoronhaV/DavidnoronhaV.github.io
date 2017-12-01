@@ -22,10 +22,12 @@
   </script>
   <script src="process.js"></script>
   <style>
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  @font-face{
+  font-family: "Butler";
+  src: url('Butler.otf');
+  }
   body{
-    font-family: 'Open Sans', sans-serif;
-    background-image: url('skyscraper.png');
+  font-family: "Butler";
   }
   .hidden{
     visibility: hidden;
@@ -34,24 +36,38 @@
     visibility: visible;
   }
   </style>
-  <script>
-  var field1 = Cookies.get('field1');
-  var field2 = Cookies.get('field2');
-  var field3 = Cookies.get('field3');
-  </script>
 </head>
 <body>
   <div class="o-container u-centered">
     <br>
     <h2>Login</h2>
     <br>
-    <form>
+    <form id="login">
       <br>
-      <label for="Fistname">Input Firstname</label>
-      <input name="Firstname"
+      <label for="fistname">Input Firstname</label>
+      <input name="firstname" type="text">
+      <br>
+      <label for="lastname">Input Lastname</label>
+      <input type="text" name="lastname"></input>
+      <br>
+      <label for="password">Input Password</label>
+      <input name="password" type="password"></input>
       <br>
     </form>
+    <p id="test"></p>
     <br>
+    <button class="c-button c-button--brand" onclick="validateform();">Works</button>
   </div>
+  <script>
+  var firstname = Cookies.get('field1');
+  var lastname = Cookies.get('field2');
+  var password = Cookies.get('field3');
+  function validateform() {
+    if (form.firstname.value == field1 && form.lastname.value == lastname && form.password.value == field3)
+    {
+document.getElementById("test").innerHTML = "It Worked!";
+};
+  };
+  </script>
 </body>
 </html>
