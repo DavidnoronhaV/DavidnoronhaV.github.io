@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Cookie Forms</title>
-  <link rel="stylesheet" href="cookieconsent.min.css">
-  <script src="cookieconsent.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="http://jsdelivr.net/gh/davidnoronhav/davidnoronhav.github.io@1.0/cookieconsent.min.css">
+  <script src="http://jsdelivr.net/gh/davidnoronhav/davidnoronhav.github.io@1.0/cookieconsent.min.js" type="text/javascript"></script>
   <script>
   window.addEventListener("load", function(){
   window.cookieconsent.initialise({
@@ -25,7 +25,7 @@
   }
   @font-face{
   font-family: "Butler";
-  src: url('Butler.otf');
+  src: url('http://jsdelivr.net/gh/davidnoronhav/davidnoronhav.github.io@1.0/Butler.otf');
   }
   body{
   font-family: "Butler";
@@ -48,7 +48,11 @@ p{
   background-image: url("https://s18.postimg.org/60g805bvd/Textures_Com_High_Rise_Glass0109_S.jpg");
   color: white;
 }
+#downloads{
+  background-image: url("https://s18.postimg.org/53o1fcqft/gradient_squares.png");
+}
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/blaze@3.6.3/dist/blaze.min.css">
 </head>
 <body>
@@ -63,7 +67,7 @@ p{
 <img src="https://s2.postimg.org/78qilf12h/image.png" class="o-image" width="300" height="300">
 </div>
 <div class="o-grid__cell">
-<img src="https://gitcdn.xyz/repo/DavidnoronhaV/davidnoronhav.github.io/master/icon__cookies-and-milk.svg" class="o-image center">
+<img src="http://jsdelivr.net/gh/davidnoronhav/davidnoronhav.github.io@1.0/icon__cookies-and-milk.svg" class="o-image center">
 </div>
 </div>
   </section>
@@ -79,7 +83,7 @@ p{
     <p>When A User Inputs Data Into A Cookie Form The Data Is Saved As A Javascript Cookie Along With The User's IP Address.
     So In Other Words, The User's Input Is Only As Safe As His Computer It-Self.
   When A User Wants To Use That Infomation On The Same Website Where He Saved It, The Website Can Easily Use It And As A Cookie Is Reserved Only For A Certain Website.</p>
-  <a href="https://cdn.rawgit.com/DavidnoronhaV/cookieform/f3cf53cf/Form%20Cookies.pdf" class="c-button c-button--brand">See Infograph</a>
+  <a href="http://jsdelivr.net/gh/davidnoronhav/cookieform@v1.0/Form%20Cookies.pdf" class="c-button c-button--brand">See Infograph</a>
 <br>
 <br>
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Wikimedia_Foundation_Servers-8055_14.jpg" class="o-image center" width="300" height="300">
@@ -88,6 +92,18 @@ p{
 <img src="https://s8.postimg.org/l1dywqtjp/cookie_full_size.jpg" class="o-image" width="500" height="500">
 </div>
 </div>
+  </section>
+  <section class="o-container u-centered" id="downloads">
+    <h2>Downloads</h2>
+    <p>Downloads Are Hosted By Github , You Need The <code>process.js , cookieconsent.min.css and cookieconsent.min.js</code></p>
+    <div class="o-grid">
+<div class="o-grid__cell">
+  <input id="foo" value="https://github.com/zenorocha/clipboard.js.git">
+  <button class="btn" data-clipboard-target="#foo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-clippy.svg" alt="Copy to clipboard" class="o-image" width="50" height="50">
+  </button>
+</div>
+    </div>
   </section>
 </div>
 </body>
@@ -105,6 +121,7 @@ jQuery("#huge").fitText();
 $(document).ready(function(){
    $("#second").fitVids();
  });
+ new Clipboard('#btn');
   </script>
 </footer>
 </html>

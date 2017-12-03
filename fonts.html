@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fonts</title>
+<style media="screen">
+@font-face{
+font-family: "Butler";
+src: url('https://cdn.jsdelivr.net/gh/davidnoronhav/davidnoronhav.github.io@1.0/Butler.otf');
+}
+body{
+  font-family: "Butler";
+}
+#main{
+  background-image: url('https://s18.postimg.org/mzhtsvtmh/image.jpg');
+  color: rgb(255,255,255);
+}
+@import url('https://rsms.me/inter/inter-ui.css');
+#inter{
+  font-family: 'Inter UI', sans-serif;
+  background-color: 	rgb(211,211,211);
+}
+p{font-size: 20px;}
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@font-face {
+  font-family: "Plex";
+  src: url('https://cdn.rawgit.com/IBM/type/4aae4cb3/fonts/Mono/web/woff2/IBMPlexMono-Regular-Latin1.woff2');
+}
+@font-face {
+  font-family: "Overpass";
+  src: url('https://cdn.rawgit.com/RedHatBrand/Overpass/c1de6a00/webfonts/overpass-webfont/overpass-regular.woff2');
+}
+#plex{
+  font-family: "Plex";
+}
+#Butler{
+  background: linear-gradient(to right, #cb2d3e, #ef473a);
+}
+#overpass{
+  background: linear-gradient(to right, #f09819, #edde5d);
+  font-family: "Overpass";
+}
+#footer{
+background-color: #000000;
+color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/blaze@3.6.3/dist/blaze.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/davatron5000/FitText.js/jquery.fittext.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/davatron5000/FitVids.js/jquery.fitvids.js"></script>
+  </head>
+  <body>
+    <div id="pagepiling">
+  <section class="o-container u-centered section" id="main">
+    <br>
+    <h1 id="big">Best Free Fonts On The World Wide Web</h1>
+    <br>
+  </section>
+  <section class="o-container u-centered section" id="inter">
+    <br>
+    <div class="o-grid">
+<div class="o-grid__cell">
+  <p id="p">
+The Inter UI font family
+
+Inter UI is a font for highly legible text on computer screens.
+</p>
+<a href="https://rsms.me/inter/" class="c-button c-button--brand">
+  <img src="https://png.icons8.com/download/nolan/64/000000" class="o-image center">
+  See Project Page</a>
+</div>
+<div class="o-grid__cell">
+<img src="https://s18.postimg.org/4xu3hkn55/image.png" class="o-image">
+</div>
+    </div>
+    <br>
+  </section>
+  <section class="o-container u-centered section" id="plex">
+    <br>
+    <h2 class="big">Plex Font</h2>
+    <p>The font is called IBM Plex. It’s designed by IBM designers, and will (say FastCoDesign) be “be used almost everywhere letters appear”, from software and websites, to press releases, visitor passes, and PowerPoint presentations.
+
+For a company as international present as IBM its typeface has to work in multiple languages. For this first release the font covers 110 different languages, with more character sets planned. There are monospace, serif and sans serif versions in eight separate weights.</p>
+    <a href="https://github.com/IBM/type" class="c-button c-button--brand"><img src="https://png.icons8.com/github/nolan/64/000000" class="o-image center"> See On Github</a>
+    <br>
+    <br>
+    <div id="video">
+<iframe src="https://www.youtube.com/embed/xcs9snQnkJs" frameborder="0" allowfullscreen></iframe>
+</div>
+<br>
+  </section>
+  <section class="o-container u-centered" id="Butler">
+    <br>
+    <div class="o-grid">
+<div class="o-grid__cell">
+  <h2 class="big">Butler</h2>
+  <p>
+    Butler is a free serif typeface inspired by a mix between both Dala Floda & the amazing Bodoni family. The main goal was to bring a bit of modernism to serif fonts by working on the curves of classical serif fonts and adding an extra stencil family.
+
+    Great for posters, very big titles, books & fancy stuff, the highly contrasted butler typeface is pleased to be at your service.
+</p>
+<a href="https://www.fontsquirrel.com/fonts/butler" class="c-button c-button--brand">See On Font Squirrel</a>
+</div>
+<div class="o-grid__cell">
+  <img src="https://s18.postimg.org/r9whoybpl/Butler_pangram.png" class="o-image">
+</div>
+    </div>
+    <br>
+  </section>
+  <section class="o-container u-centered" id="overpass">
+<br>
+<h1 class="big">Overpass</h1>
+<p>An open source font family inspired by Highway Gothic. Sponsored by Red Hat. Created by Delve Fonts.</p>
+<img src="redhat.svg" class="o-image center">
+<br>
+<a href="https://github.com/RedHatBrand/Overpass" class="c-button c-button--brand">See On Github</a>
+<br>
+  </section>
+</div>
+  </body>
+  <footer id="footer" class="o-container u-centered">
+    <script>
+    jQuery("#big,#p,.big").fitText();
+    $(document).ready(function(){
+        $("#video").fitVids();
+      });
+    </script>
+    Brought To You With Love By davidnoronhav
+<br>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </footer>
+</html>
