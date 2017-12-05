@@ -31,7 +31,15 @@
     #second{
         background: linear-gradient(to left, #b993d6, #8ca6db);
     }
+    img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pagepiling.js@1.5.4/dist/jquery.pagepiling.min.css">
   </head>
   <body>
     <div id="page">
@@ -41,7 +49,9 @@
       <h3>With Javascript , CSS And HTML</h3>
       <div class="o-grid">
       <div class="o-grid__cell">
-      <img src="http://cdn.jsdelivr.net/gh/voodootikigod/logo.js/js.png" class="o-image">
+      <br>
+      <br>
+      <img width="300" height="300" src="https://cdn.rawgit.com/voodootikigod/logo.js/1544bdee/js.png" class="o-image center">
       </div>
       <div class="o-grid__cell">
       <img src="css-3.svg" class="o-image">
@@ -52,7 +62,7 @@
       </div>
       <br>
       </section>
-      <section class="o-container u-centered" id="second">
+      <section class="o-container u-centered section" id="second">
       <h2>Fonts</h2>
       <p>Fonts Are A Simple Way To Express Your Nature As Well As To Improve Your Site.
       Some Of The Best Places To Find Fonts Are: <a href="//fonts.google.com">Google Fonts</a> , <a href="https://www.fontsquirrel.com/">Font Squirrel</a> And <a href="https://www.dafont.com/">Dafont</a>
@@ -60,9 +70,15 @@
   For Some Of The Best Fonts You Can Visit Our Best Fonts Article.
 <br>
 <a href="fonts.html" class="c-button c-button--brand">See Best Fonts</a>
+<br>
 See <a href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace">Font-Face</a> For How To Embed Fonts.
 </p>
       </section>
     </div>
+    <script>
+    $(document).ready(function() {
+	$('#page').pagepiling();
+});
+    </script>
   </body>
 </html>
